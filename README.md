@@ -6,8 +6,8 @@ parts C through J.
 ### Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 *File Name:* mainscreen.html & demo.css  
 *Line Number:*
-- mainscreen - line 14-16, 22-23  
-- demo - 1-5  
+- mainscreen: line 14-16, 22-23  
+- demo: 1-5  
 
 *Change:*
 - Added background and text alignment styling
@@ -16,8 +16,10 @@ parts C through J.
 
 ## Part D
 ### Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
-*File Name:* 
+*File Name:* about.html & mainscreen.html  
 *Line Number:*
+- about: line 1-end
+- mainscreen: line 25-28
 *Change:*
 
 ## Part E
