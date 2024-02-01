@@ -13,7 +13,12 @@
 
     <!-- Part C Change -->
     <title>Plants by Atlas</title>
-    <link rel="stylesheet" href="../static/css/demo.css"/>
+    <style>
+        h1, h2 {text-align: center;}
+        p {text-align: center;}
+        div {text-align:center;}
+        body {background-color:#b0cea5;}
+    </style>
 </head>
 <body>
 
@@ -24,11 +29,12 @@
 
     <!-- Part D Change -->
     <nav>
-        <a href="about.html">About Us</a>
+        <a th:href="@{/about}" class="btn btn-primary btn-sm mb-3">About Us</a>
     </nav>
     <hr>
+
     <h2>Parts</h2>
-    <form th:action="@{/mainscreen}">
+    <form th:href="@{/mainscreen}">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
         &nbsp;
         <input type="submit" value="Search" />

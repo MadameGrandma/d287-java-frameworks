@@ -1,8 +1,5 @@
-<!-- Part D Change -->
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
 
@@ -16,17 +13,21 @@
 
     <!-- Part D Change -->
     <title>About Us</title>
-    <link rel="stylesheet" href="../static/css/demo.css"/>
+    <style>
+        h1, h2 {text-align: center;}
+        p {text-align: center;}
+        div {text-align:center;}
+        body {background-color:#b0cea5;}
+    </style>
 </head>
 
 
 <body>
 <div class="container">
-
     <h1>Plants by Atlas</h1>
     <!-- Part D Change -->
     <nav>
-        <a href="mainscreen.html">Home</a>
+        <a th:href="@{/mainscreen}" class="btn btn-primary btn-sm mb-3">Home</a>
     </nav>
     <hr>
 

@@ -4,10 +4,9 @@ parts C through J.
 
 ## Part C
 ### Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
-*File Name:* mainscreen.html & demo.css  
+*File Name:* mainscreen.html   
 *Line Number:*
-- mainscreen: line 14-16, 22-23  
-- demo: 1-5  
+- mainscreen: line 14-22
 
 *Change:*
 - Added background and text alignment styling
@@ -16,11 +15,16 @@ parts C through J.
 
 ## Part D
 ### Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
-*File Name:* about.html & mainscreen.html  
+*File Name:* about.html | mainscreen.html | AboutUsController.java
 *Line Number:*
 - about: line 1-end
-- mainscreen: line 25-28
+- mainscreen: line 31-33
+- AboutUsController: 1-end  
+
 *Change:*
+- Created AboutUsController.java to handle requests to the about page
+- Updated mainscreen to request the about page
+- Created about.html to design and serve the page
 
 ## Part E
 ### Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
