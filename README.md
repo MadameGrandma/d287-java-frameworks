@@ -19,7 +19,7 @@ parts C through J.
 *Line Number:*
 - about: line 1-end
 - mainscreen: line 31-33
-- AboutUsController: 1-end  
+- AboutUsController: 1-end (new file)  
 
 *Change:*
 - Created AboutUsController.java to handle requests to the about page
@@ -28,11 +28,11 @@ parts C through J.
 
 ## Part E
 ### Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
-*File Name:* BootStrapData.java
-*Line Number:* 72-99
+*File Name:* BootStrapData.java  
+*Line Number:* 72-99  
 *Change:*
 - Created new parts and products for sample inventory
-- Saved to partRepository & productResposity respectively
+- Saved to partRepository & productRepository respectively  
 
 ## Part F
 ### Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
@@ -40,9 +40,18 @@ parts C through J.
 -  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 -  Display a message that indicates the success or failure of a purchase.
 
-*File Name:*
+*File Name:* mainscreen.html | AddProductController.java | confirmationbuyproduct.html
 *Line Number:*
+- mainscreen.html: line 97-98
+- AddProductController: 131-152
+- confirmationbuyproduct: 1-end (new file)  
+- purchaseerror: 1-end (new file)  
+
 *Change:*
+- Added BuyNow button to mainscreen
+- Pointed button to the buyproduct controller in AddProductController
+- Created a controller for buy product, which decrements and saves the current inventory of that product
+- Created a redirect page to confirm successful purchase
 
 ## Part G
 ### Modify the parts to track maximum and minimum inventory by doing the following:

@@ -127,6 +127,30 @@ public class AddProductController {
         return "confirmationdeleteproduct";
     }
 
+    // Part F Change
+    @GetMapping("/buyproduct")
+    public String buyProduct(@RequestParam("productID") int theId, Model theModel){
+        int prodCount;
+        ProductService productService = context.getBean(ProductServiceImpl.class);
+        Product product2 = productService.findById(theId);
+
+        prodCount = product2.getInv();
+        System.out.println("Current product count " + prodCount);
+        if (prodCount > 0){
+            try {
+                product2.setInv(prodCount - 1);
+                productService.save(product2);
+                System.out.println("Updated product count " + (product2.getInv()));
+                return "confirmationbuyproduct";
+            } catch (Exception e) {
+                System.out.println("Error has occurred: " + e);
+            }
+        } else {
+            return "purchaseerror";
+        }
+        return "mainscreen";
+    }
+
     public AddProductController(PartService partService) {
         this.partService = partService;
     }
@@ -173,4 +197,6 @@ public class AddProductController {
         theModel.addAttribute("availparts",availParts);
         return "productForm";
     }
+
+
 }
