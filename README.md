@@ -28,9 +28,11 @@ parts C through J.
 
 ## Part E
 ### Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
-*File Name:*
-*Line Number:*
+*File Name:* BootStrapData.java
+*Line Number:* 72-99
 *Change:*
+- Created new parts and products for sample inventory
+- Saved to partRepository & productResposity respectively
 
 ## Part F
 ### Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
