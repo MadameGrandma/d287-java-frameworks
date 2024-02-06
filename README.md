@@ -28,10 +28,14 @@ parts C through J.
 
 ## Part E
 ### Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
-*File Name:* BootStrapData.java  
-*Line Number:* 72-99  
+*File Name:* BootStrapData.java | InhousePart.java
+*Line Number:* 
+- BootStrapData: 72-101
+- InhousePart: 19-26  
+
 *Change:*
-- Created new parts and products for sample inventory
+- Built constructor in InhousePart.java to build sample inventory items
+- Created new parts and products for sample inventory in BootStrapData
 - Saved to partRepository & productRepository respectively  
 
 ## Part F
@@ -61,9 +65,29 @@ parts C through J.
 -  Rename the file the persistent storage is saved to.
 -  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
-*File Name:*
+*File Name:* Partr.java | InhousePart.java | mainscreen.html | InhousePartForm.html | OutsourcedPartForm.html | BootStrapData.java | application.properties | minInvValidator.java | ValidMinInv.java | MaxInvValidator.java | ValidMaxInv.java
 *Line Number:*
+- Part: 25-26
+- InhousePart: 22-41
+- mainscreen: 52-65
+- InhousePartForm: 22-30
+- OutsourcedPartForm: 24-32
+- BootStrapData: 72-81
+- application.properties: 8-9  
+- MinInvValidator: 1-end (new file)
+- ValidMinInv: 1-end (new file)
+- MaxInvValidator: 1-end (new file)
+- ValidMaxInv: 1-end (new file)  
+
 *Change:*
+- Added min and max fields to InhousePart.java constructor
+- Generated getters and setters for min and max
+- Modified the sample inventory created in BootStrapData to include min and max for sample parts
+- Added min and max columns to Parts table on mainscreen
+- Renamed persistent storage to "jdbc:h2:file:~/partGChange"  
+- Created validator annotation & class for both min and max values
+- Included Annotations for new min/max validators in Part.java 
+- Remapped the exception for min/max to display error in form  
 
 ## Part H
 ### Add validation for between or at the maximum and minimum fields. The validation must include the following:
@@ -71,9 +95,9 @@ parts C through J.
 -  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 -  Display error messages when adding and updating parts if the inventory is greater than the maximum. \
 
-*File Name:*
-*Line Number:*
-*Change:*
+*File Name:* 
+*Line Number:* 
+*Change:* 
 
 ## Part I
 ### Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.

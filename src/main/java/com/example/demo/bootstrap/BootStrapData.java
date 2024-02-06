@@ -69,16 +69,16 @@ public class BootStrapData implements CommandLineRunner {
         productRepository.save(unicycle);
         */
 
-        /* Part E Change */
-        /* FIX ME: Commenting out to create only once in mem. Remove before submitting*/
+        /* Part E & G Change */
         /*
-        Part pot = new Part("Pot", 12.99, 25);
-        Part soil = new Part("Soil", 5.99, 50);
-        Part plantLight = new Part("Plant Light", 25.99, 15);
-        Part waterCan = new Part("Watering Can", 6.99, 25);
-        Part miscPlant = new Part("Plant - Miscellaneous", 10.99, 5);
-        Part pothosPlant = new Part("Plant - Pothos", 10.99, 5);
-        Part snakePlant = new Part("Plant - Snake", 12.99, 8);
+        //Part pot = new Part("Pot", 12.99, 25,5,100);
+        InhousePart pot = new InhousePart("Pot", 12.99, 25,5,100);
+        InhousePart soil = new InhousePart( "Soil", 5.99, 50,5,100);
+        InhousePart plantLight = new InhousePart( "Plant Light", 25.99, 15,1,15);
+        InhousePart waterCan = new InhousePart( "Watering Can", 6.99, 25,1, 10);
+        InhousePart miscPlant = new InhousePart( "Plant - Miscellaneous", 10.99, 5,1,15);
+        InhousePart pothosPlant = new InhousePart( "Plant - Pothos", 10.99, 5,1,15);
+        InhousePart snakePlant = new InhousePart( "Plant - Snake", 12.99, 8,1,15);
 
         partRepository.save(pot);
         partRepository.save(soil);
@@ -99,8 +99,8 @@ public class BootStrapData implements CommandLineRunner {
         productRepository.save(careKit);
         productRepository.save(pothosPot);
         productRepository.save(snakePot);
-        }
         */
+
 
 
         System.out.println("Started in Bootstrap");
