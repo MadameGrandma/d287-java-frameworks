@@ -6,6 +6,8 @@ import com.example.demo.service.PartService;
 import com.example.demo.service.PartServiceImpl;
 import com.example.demo.service.ProductService;
 import com.example.demo.service.ProductServiceImpl;
+import com.example.demo.validators.ValidEnufParts;
+import com.example.demo.validators.ValidMinInv;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -24,6 +26,7 @@ import java.util.List;
  *
  */
 @Controller
+@ValidEnufParts
 public class AddProductController {
     @Autowired
     private ApplicationContext context;
@@ -166,14 +169,24 @@ public class AddProductController {
         else{
         product1.getParts().add(partService.findById(theID));
         partService.findById(theID).getProducts().add(product1);
+        // Part H Change
+        Part part = partService.findById(theID);
+        int partInv = part.getInv();
+        int newInv = partInv - product1.getInv();
+        part.setInv(newInv);
+        partService.save(part);
+
         ProductService productService = context.getBean(ProductServiceImpl.class);
         productService.save(product1);
         partService.save(partService.findById(theID));
         theModel.addAttribute("product", product1);
         theModel.addAttribute("assparts",product1.getParts());
+
         List<Part>availParts=new ArrayList<>();
         for(Part p: partService.findAll()){
-            if(!product1.getParts().contains(p))availParts.add(p);
+            if(!product1.getParts().contains(p)){
+                availParts.add(p);
+            }
         }
         theModel.addAttribute("availparts",availParts);
         return "productForm";}

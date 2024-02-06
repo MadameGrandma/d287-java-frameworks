@@ -65,7 +65,7 @@ parts C through J.
 -  Rename the file the persistent storage is saved to.
 -  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
-*File Name:* Partr.java | InhousePart.java | mainscreen.html | InhousePartForm.html | OutsourcedPartForm.html | BootStrapData.java | application.properties | minInvValidator.java | ValidMinInv.java | MaxInvValidator.java | ValidMaxInv.java
+*File Name:* Partr.java | InhousePart.java | mainscreen.html | InhousePartForm.html | OutsourcedPartForm.html | BootStrapData.java | application.properties | MinInvValidator.java | ValidMinInv.java | MaxInvValidator.java | ValidMaxInv.java
 *Line Number:*
 - Part: 25-26
 - InhousePart: 22-41
@@ -95,9 +95,20 @@ parts C through J.
 -  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 -  Display error messages when adding and updating parts if the inventory is greater than the maximum. \
 
-*File Name:* 
+*File Name:* minInvValidator.java | ValidMinInv.java | MaxInvValidator.java | ValidMaxInv.java | ValidEnufParts.java | EnufPartsValidator.java |AddProductController.java
 *Line Number:* 
+- MinInvValidator: 1-end (new file)
+- ValidMinInv: 1-end (new file)
+- MaxInvValidator: 1-end (new file)
+- ValidMaxInv: 1-end (new file)  
+- ValidEnufParts: 20-21 
+- EnufPartsValidator: 38-40
+- AddProductController: 172-177
+
 *Change:* 
+- Handled error messaging for low and high part inventory above in section G. Files still noted above
+- Changed EnufPartsValidator to account for the parts minimum inventory requirements, and ensure that adding the product maintains part minimums. Does not add if there are not enough parts
+- AddProductController did not decrement part inventory. Updated to decrement part inventory accord to how many products are being added to inventory
 
 ## Part I
 ### Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
