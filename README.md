@@ -5,8 +5,9 @@ parts C through J.
 ## Part C
 ### Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 *File Name:* mainscreen.html   
+
 *Line Number:*
-- mainscreen: line 15-21, 28 
+- mainscreen: line 15-21, 28  
 
 *Change:*
 - Added background and text alignment styling
@@ -15,7 +16,8 @@ parts C through J.
 
 ## Part D
 ### Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
-*File Name:* about.html | mainscreen.html | AboutUsController.java
+*File Name:* about.html | mainscreen.html | AboutUsController.java  
+
 *Line Number:*
 - about: line 1-end (new file)
 - mainscreen: line 31-33
@@ -28,7 +30,8 @@ parts C through J.
 
 ## Part E
 ### Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
-*File Name:* BootStrapData.java | InhousePart.java
+*File Name:* BootStrapData.java | InhousePart.java  
+
 *Line Number:* 
 - BootStrapData: 72-99
 - InhousePart: 23-30  
@@ -44,7 +47,8 @@ parts C through J.
 -  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 -  Display a message that indicates the success or failure of a purchase.
 
-*File Name:* mainscreen.html | AddProductController.java | confirmationbuyproduct.html
+*File Name:* mainscreen.html | AddProductController.java | confirmationbuyproduct.html  
+
 *Line Number:*
 - mainscreen.html: line 105
 - AddProductController: 133-155
@@ -65,7 +69,8 @@ parts C through J.
 -  Rename the file the persistent storage is saved to.
 -  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
-*File Name:* Part.java | InhousePart.java | mainscreen.html | InhousePartForm.html | OutsourcedPartForm.html | BootStrapData.java | application.properties | MinInvValidator.java | ValidMinInv.java | MaxInvValidator.java | ValidMaxInv.java
+*File Name:* Part.java | InhousePart.java | mainscreen.html | InhousePartForm.html | OutsourcedPartForm.html | BootStrapData.java | application.properties | MinInvValidator.java | ValidMinInv.java | MaxInvValidator.java | ValidMaxInv.java  
+
 *Line Number:*
 - Part: 37-39
 - InhousePart: 23-30
@@ -93,9 +98,10 @@ parts C through J.
 ### Add validation for between or at the maximum and minimum fields. The validation must include the following:
 -  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 -  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
--  Display error messages when adding and updating parts if the inventory is greater than the maximum. \
+-  Display error messages when adding and updating parts if the inventory is greater than the maximum. 
 
-*File Name:* minInvValidator.java | ValidMinInv.java | MaxInvValidator.java | ValidMaxInv.java | ValidEnufParts.java | EnufPartsValidator.java |AddProductController.java
+*File Name:* minInvValidator.java | ValidMinInv.java | MaxInvValidator.java | ValidMaxInv.java | ValidEnufParts.java | EnufPartsValidator.java |AddProductController.java  
+
 *Line Number:* 
 - MinInvValidator: 1-end (new file)
 - ValidMinInv: 1-end (new file)
@@ -103,7 +109,7 @@ parts C through J.
 - ValidMaxInv: 1-end (new file)  
 - ValidEnufParts: 20-21 
 - EnufPartsValidator: 38-40
-- AddProductController: 172-177
+- AddProductController: 172-177  
 
 *Change:* 
 - Handled error messaging for low and high part inventory above in section G. Files still noted above
@@ -112,8 +118,10 @@ parts C through J.
 
 ## Part I
 ### Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
-*File Name:* PartTest.java 
-*Line Number:* 161-end
+*File Name:* PartTest.java  
+
+*Line Number:* 161-end  
+
 *Change:*
  - Created unit test for minInv & maxInv
  - Set the respective inventory for partIn
@@ -121,8 +129,10 @@ parts C through J.
 
 ## Part J
 ### Remove the class files for any unused validators in order to clean your code.
-*File Name:* DeletePartValidator.java
-*Line Number:* Entire file
+*File Name:* DeletePartValidator.java  
+
+*Line Number:* Entire file  
+
 *Change:*
  - Ran usage search on DeletePartValidator, which came back with no usages
  - Deleted file
