@@ -121,6 +121,10 @@ parts C through J.
 
 ## Part J
 ### Remove the class files for any unused validators in order to clean your code.
-*File Name:* 
-*Line Number:*
+*File Name:* DeletePartValidator.java
+*Line Number:* Entire file
 *Change:*
+ - Ran usage search on DeletePartValidator, which came back with no usages
+ - Deleted file
+
+
