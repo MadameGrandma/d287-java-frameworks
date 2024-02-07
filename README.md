@@ -112,12 +112,15 @@ parts C through J.
 
 ## Part I
 ### Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
-*File Name:*
-*Line Number:*
+*File Name:* PartTest.java 
+*Line Number:* 161-173
 *Change:*
+ - Created unit test for minInv & maxInv
+ - Set the respective inventory for partIn
+ - assertEquals for equality
 
 ## Part J
 ### Remove the class files for any unused validators in order to clean your code.
-*File Name:*
+*File Name:* 
 *Line Number:*
 *Change:*

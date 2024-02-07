@@ -42,4 +42,6 @@ class InhousePartServiceTest {
         List<InhousePart> parts=inhousePartService.findAll();
         assertEquals(partData.size(),1);
     }
+
+
 }

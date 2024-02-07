@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 /**
  * Project: demoDarbyFrameworks2-master
@@ -156,4 +157,21 @@ class PartTest {
         partOut.setId(1l);
         assertEquals(partIn.hashCode(),partOut.hashCode());
     }
+
+    @Test
+    void testMinInv(){
+        int minInv = 5;
+        partIn.setMinInv(minInv);
+        assertEquals(minInv,partIn.getMinInv());
+    }
+
+    @Test
+    void testMaxInv(){
+        int maxInv = 100;
+        partIn.setMaxInv(maxInv);
+        assertEquals(maxInv,partIn.getMaxInv());
+    }
+
+
+
 }
