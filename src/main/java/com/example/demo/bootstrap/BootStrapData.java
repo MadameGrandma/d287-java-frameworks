@@ -70,8 +70,6 @@ public class BootStrapData implements CommandLineRunner {
         */
 
         /* Part E & G Change */
-        /*
-        //Part pot = new Part("Pot", 12.99, 25,5,100);
         InhousePart pot = new InhousePart("Pot", 12.99, 25,5,100);
         InhousePart soil = new InhousePart( "Soil", 5.99, 50,5,100);
         InhousePart plantLight = new InhousePart( "Plant Light", 25.99, 15,1,15);
@@ -99,7 +97,7 @@ public class BootStrapData implements CommandLineRunner {
         productRepository.save(careKit);
         productRepository.save(pothosPot);
         productRepository.save(snakePot);
-        */
+
 
 
 

@@ -35,7 +35,6 @@ public class Part implements Serializable {
 
     int inv;
     // Part G Change
-    //@ValidMinInv
     int minInv;
     int maxInv;
 

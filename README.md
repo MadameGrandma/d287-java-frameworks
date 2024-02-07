@@ -6,7 +6,7 @@ parts C through J.
 ### Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 *File Name:* mainscreen.html   
 *Line Number:*
-- mainscreen: line 14-22
+- mainscreen: line 15-21, 28 
 
 *Change:*
 - Added background and text alignment styling
@@ -17,7 +17,7 @@ parts C through J.
 ### Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 *File Name:* about.html | mainscreen.html | AboutUsController.java
 *Line Number:*
-- about: line 1-end
+- about: line 1-end (new file)
 - mainscreen: line 31-33
 - AboutUsController: 1-end (new file)  
 
@@ -30,8 +30,8 @@ parts C through J.
 ### Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 *File Name:* BootStrapData.java | InhousePart.java
 *Line Number:* 
-- BootStrapData: 72-101
-- InhousePart: 19-26  
+- BootStrapData: 72-99
+- InhousePart: 23-30  
 
 *Change:*
 - Built constructor in InhousePart.java to build sample inventory items
@@ -46,8 +46,8 @@ parts C through J.
 
 *File Name:* mainscreen.html | AddProductController.java | confirmationbuyproduct.html
 *Line Number:*
-- mainscreen.html: line 97-98
-- AddProductController: 131-152
+- mainscreen.html: line 105
+- AddProductController: 133-155
 - confirmationbuyproduct: 1-end (new file)  
 - purchaseerror: 1-end (new file)  
 
@@ -65,10 +65,10 @@ parts C through J.
 -  Rename the file the persistent storage is saved to.
 -  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
-*File Name:* Partr.java | InhousePart.java | mainscreen.html | InhousePartForm.html | OutsourcedPartForm.html | BootStrapData.java | application.properties | MinInvValidator.java | ValidMinInv.java | MaxInvValidator.java | ValidMaxInv.java
+*File Name:* Part.java | InhousePart.java | mainscreen.html | InhousePartForm.html | OutsourcedPartForm.html | BootStrapData.java | application.properties | MinInvValidator.java | ValidMinInv.java | MaxInvValidator.java | ValidMaxInv.java
 *Line Number:*
-- Part: 25-26
-- InhousePart: 22-41
+- Part: 37-39
+- InhousePart: 23-30
 - mainscreen: 52-65
 - InhousePartForm: 22-30
 - OutsourcedPartForm: 24-32
@@ -113,7 +113,7 @@ parts C through J.
 ## Part I
 ### Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 *File Name:* PartTest.java 
-*Line Number:* 161-173
+*Line Number:* 161-end
 *Change:*
  - Created unit test for minInv & maxInv
  - Set the respective inventory for partIn

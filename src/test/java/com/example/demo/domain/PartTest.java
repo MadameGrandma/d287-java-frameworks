@@ -158,6 +158,7 @@ class PartTest {
         assertEquals(partIn.hashCode(),partOut.hashCode());
     }
 
+    // Part I Change
     @Test
     void testMinInv(){
         int minInv = 5;
